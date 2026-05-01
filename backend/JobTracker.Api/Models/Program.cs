@@ -34,11 +34,12 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 var app = builder.Build();
 
+//Middle Ware
+
 app.UseAuthentication();
 
 app.UseAuthorization();
 
-// 🔐 Middleware
 app.UseHttpsRedirection();
 
 app.MapControllers();
